@@ -1,0 +1,23 @@
+// print following pattern
+// * * * * *
+// * * * *
+// * * * 
+// * *
+// *
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    
+    for (int i=5; i>0; i--)
+    {
+        for (int j=i;j>0;j--)
+        {
+            printf("*");        //prints the *
+        }
+        printf("\n");           //next line
+    }
+    
+    return 0;
+}
