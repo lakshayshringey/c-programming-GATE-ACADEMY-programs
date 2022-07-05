@@ -1,0 +1,14 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    // int b=3;
+    int a[3] = {10,20,30};
+    printf("%d\n",a);       //array ka naam apne pehle element ka address hota h yaani a[0] ka address print hoga
+    printf("%d\n",a[0]);    //10 print karega
+    printf("%d\n",&a[0]);   //&a[0] means uska address print karega => a ≡ &a[0]
+    printf("%d\n",*a);      //a[0] ki value 10 print karega
+    
+    return 0;
+}
