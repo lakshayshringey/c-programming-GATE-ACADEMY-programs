@@ -1,0 +1,33 @@
+// print following pattern
+//         *
+//       * * *
+//     * * * * *
+//   * * * * * * *
+// * * * * * * * * *
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    
+    int row=5;
+    for (int i=1; i<=row; i++)
+    {
+        for (int j=1;j<=row-i;j++)
+        {
+            printf("a");        //prints the "space"
+        }
+        // printf("h");
+        for (int k=row-i+1; k<=row+i-1; k++)
+        {
+            printf("*");
+        }
+        for (int l=row+i;l<=2*row-1;l++)
+        {
+            printf("b");        //prints the "space"
+        }
+        printf("\n");           //next line
+    }
+    
+    return 0;
+}
