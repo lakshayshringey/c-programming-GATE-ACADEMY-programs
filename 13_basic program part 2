@@ -1,0 +1,16 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    // int b=3;
+    int a[3] = {10,20,30};
+    printf("%d\n",a);       //address print hoga
+    printf("%d\n",a+1);     //address of a[0] + 1*sizeof(a[0])
+    printf("%d\n",a[1]);    //a[1] ki value jo ki 20 h
+    printf("%d\n",1[a]);    //a[1] ki value jo ki 20 h
+    printf("%d\n",a+1);     //address of a[0] + 1*sizeof(a[0])
+    printf("%d\n",*(a+1));  //a[1] ki value print hogi
+    printf("%d\n",*(1+a));  //a[1] ki value print hogi
+    return 0;
+}
