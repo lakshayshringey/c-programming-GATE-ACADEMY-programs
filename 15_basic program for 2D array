@@ -1,0 +1,20 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main()
+{
+    // Write C code here
+    int a[2][3] = {10,20,30,7,8,9};
+    printf("sizeof(a[0][0])=%d\n",sizeof(a[0][0]));     //size of a[0][0] element
+    printf("sizeof(a[0])=%d\n",sizeof(a[0]));           //size of a[0] array
+    printf("sizeof(a[1])=%d\n",sizeof(a[1]));           //size of a[1] array
+    printf("sizeof(a)=%d\n",sizeof(a));                 //size of complete a array
+
+    printf("a=%u\n",a);                                 //array ka naam apne pehle element ka address hota h yaani a[0] ka address print hoga => a[0][0] ka nahi... a ka pehla element a[0] hai
+    printf("&a[0]=%u\n",&a[0]);                         //a[0] array ke starting element ka address print hoga jo ki a ke starting element ke barabar hoga
+    printf("&a[1]=%u\n",&a[1]);                         //a[1] array ke starting element ka address print hoga jo ki a[0] + 12 byte hoga
+    printf("&a[0][1]=%u\n",&a[0][1]);                   //a[0][1] ka address a[0] + 4 byte hoga
+    printf("&a[1][2]=%u\n",&a[1][2]);                   //a[1][1] ka address a[1] array plus 8 byte hoga
+
+    return 0;
+}
