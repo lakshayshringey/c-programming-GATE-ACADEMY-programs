@@ -1,0 +1,19 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main()
+{
+    // Write C code here
+    int a[3][2][2] = {1,2,3,4,5,6,7,8,9,10,11,12};
+    printf("a=%u\n",a);				//array ka naam uske pehle element ke address ko represent karta => a[0] ka address print hoga
+    printf("a+1=%u\n",a+1);			//&a[0]+1*sizeof(a[0])=&a[0]+1*16
+    printf("*a=%u\n",*a);			//*(&a[0]) => a[0] => &a[0][0] => a[0][0] ka address print hoga
+    printf("*a+1=%u\n",*a+1);		//*(&a[0])+1 => a[0]+1 => &a[0][0] => &a[0][0] + 1*(size of a[0][0]) => &a[0][0] + 1*(8)
+    printf("&a+1=%u\n",&a+1);		//&a+1 => &a + 1*size of(a) => &a + 1*(12*4)=> &a + 48
+    printf("**a=%u\n",**a);			//**(&a[0]) => *a[0] => *&a[0][0] => a[0][0] => &a[0][0][0] => a[0][0][0] element ka address
+    printf("***a=%u\n",***a);		//***(&a[0]) => **a[0] => **&a[0][0] => *a[0][0] => *&a[0][0][0] => a[0][0][0] element ki value
+    printf("**a+1=%u\n",**a+1);		//**(&a[0])+1=>*a[0]+1=>*&a[0][0]+1=>a[0][0]+1=>&a[0][0][0]+1=>&a[0][0][0]+1*(sizeof(&a[0][0][0]))=>&a[0][0][0]+1*4
+    printf("***a+1=%u\n",***a+1);	//***(&a[0])+1 => **a[0]+1 => **&a[0][0]+1 => *a[0][0]+1 => *&a[0][0][0]+1 => a[0][0][0]+1 => 2
+
+    return 0;
+}
