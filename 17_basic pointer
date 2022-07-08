@@ -1,0 +1,16 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int a=10;
+    int *p=&a;              //p me a ka address hai
+    int **q=&p;             //q me p ka address hai
+    printf("a=%d\n",a);     //a ki value print hogi
+    printf("p=%u\n",p);     //p ka address print hoga
+    printf("*p=%u\n",*p);   //a ki value print karega *p
+    printf("*q=%u\n",*q);   //p ka address print karega *q
+    printf("**q=%u\n",**q); //a ki value print karega **q
+    
+    return 0;
+}
